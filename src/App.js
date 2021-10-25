@@ -35,20 +35,21 @@ function App() {
   } = useTable({ columns, data: healthData })
 
   const getAppHealthStatus = async () => {
-    const res = await fetch("http://localhost:8082/external/all");
+    const res = await fetch("http://localhost:8082/health/all");
     const data = await res.json();
     setHealthData(data);
   };
 
   useEffect(() => {
-    const timer = setInterval(getAppHealthStatus, 30000);
+    const timer = setInterval(getAppHealthStatus, 10000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <>
     <h1>Service Health Status</h1>
-    <table {...getTableProps()} style={{ border: 'solid 1px #33ccff' }}>
+    { !(healthData.length > 0) ? <p>Fetching Data... </p> : 
+    (<table {...getTableProps()} style={{ border: 'solid 1px #33ccff' }}>
        <thead>
          {headerGroups.map(headerGroup => (
            <tr {...headerGroup.getHeaderGroupProps()}>
@@ -56,7 +57,7 @@ function App() {
                <th
                  {...column.getHeaderProps()}
                  style={{
-                   borderBottom: 'solid 3px #ff6666',
+                   borderBottom: 'solid 3px #669999',
                    background: 'aliceblue',
                    color: 'black',
                    fontWeight: 'bold',
@@ -92,7 +93,7 @@ function App() {
            )
          })}
        </tbody>
-     </table>
+     </table>) }
      </>
   );
 }
