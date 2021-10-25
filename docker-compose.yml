@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  livi-frontend:
+    build: .
+    container_name: livi-front-end
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
