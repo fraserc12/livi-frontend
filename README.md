@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app relies on this repo being started: https://github.com/fraserc12/livi-api-demo/
 
 ## Available Scripts
 
@@ -17,6 +15,6 @@ You will also see any lint errors in the console.
 ### What this app does
 
 This app will fetch [http://localhost:3000/external/all](http://localhost:3000/external/all)
-every 30 seconds. 
+**every 30 seconds.**
 
 Displaying health Data from various applications we have stored in the backend database.
