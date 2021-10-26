@@ -18,3 +18,6 @@ This app will fetch [http://localhost:3000/external/all](http://localhost:3000/e
 **every 30 seconds.**
 
 Displaying health Data from various applications we have stored in the backend database.
+
+App:
+<img width="633" alt="image" src="https://user-images.githubusercontent.com/22052706/138936016-a9aae1e4-9956-4020-9d21-5c82041931ff.png">
