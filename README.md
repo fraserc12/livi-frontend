@@ -4,7 +4,7 @@ This app relies on this repo being started: https://github.com/fraserc12/livi-ap
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm install and npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
